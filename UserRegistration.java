@@ -2,8 +2,8 @@ import java.util.Scanner;
 public class UserRegistration {
 	private static final String NamePattern = "^[A-Z][a-zA-Z]{2,}$";
 	private static final String EmailPattern = "^[0-9a-zA-Z]+([.\\-+]?[a-zA-Z0-9]+)?\\@[0-9a-zA-Z]+.[a-zA-Z]{2,4}(.[a-zA-Z]{2,})*$";
-	private static final String PhonenumberPattern ="^([\\+]?91)?[6-9]{1}[0-9]{9}$";
-	private static final String PasswordPattern ="^(?=.*[a-z])(?=.*[A-Z]).{8,}$"; 
+	private static final String PhonenumberPattern = "^([\\+]?91)?[6-9]{1}[0-9]{9}$";
+	private static final String PasswordPattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$";
 	Scanner scanner = new Scanner(System.in);
 	public void FirstnameValidator() 
 	{
