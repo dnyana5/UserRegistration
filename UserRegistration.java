@@ -3,6 +3,7 @@ public class UserRegistration {
 	private static final String NamePattern = "^[A-Z][a-zA-Z]{2,}$";
 	private static final String EmailPattern = "^[0-9a-zA-Z]+([.\\-+]?[a-zA-Z0-9]+)?\\@[0-9a-zA-Z]+.[a-zA-Z]{2,4}(.[a-zA-Z]{2,})*$";
 	private static final String PhonenumberPattern ="^([\\+]?91)?[6-9]{1}[0-9]{9}$";
+	private static final String PasswordPattern ="^.{8,}$";
 	Scanner scanner = new Scanner(System.in);
 	public void FirstnameValidator() 
 	{
@@ -49,6 +50,17 @@ public class UserRegistration {
 			PhoneNumberValidator();
 		}
 	}
+	public void PasswordValidator() {
+		System.out.println("Enter the password:");
+		String input = scanner.next();
+		if (input.matches(PasswordPattern)) {
+			System.out.println("password sucessfully entered");
+		}
+		else {
+			System.out.println("**Invalid password**try again**");
+			PasswordValidator();
+		}
+	}
 	public static void main(String[] args) {
 		System.out.println("Welcome to user registration");
 		UserRegistration user = new UserRegistration();
@@ -56,6 +68,7 @@ public class UserRegistration {
 		user.LastnameValidator();
 		user.EmailValidator();
 		user.PhoneNumberValidator();
+		user.PasswordValidator();
 	}
 
 }
