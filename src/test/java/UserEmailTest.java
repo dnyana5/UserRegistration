@@ -8,8 +8,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-import org.junit.Test;
-
 @RunWith(Parameterized.class)
 public class UserEmailTest {
     private String email;
